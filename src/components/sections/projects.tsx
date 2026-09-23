@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react"
 
 import { Carousel } from "@/components/carousel"
 import { GitHubIcon } from "@/components/icons"
+import { ProfileLink } from "@/components/profile-link"
 import { Section } from "@/components/section"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -14,7 +15,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { projects, type Project } from "@/data/portfolio"
+import { projects, site, type Project } from "@/data/portfolio"
 
 const tones: Record<Project["tone"], string> = {
   blue: "from-[#e8f1ff] to-[#cfe2ff] dark:from-[#0b2140] dark:to-[#0f2c55]",
@@ -28,6 +29,15 @@ export function Projects() {
       id="proyectos"
       title="Proyectos destacados"
       description="Una selección de trabajos en los que he diseñado, desarrollado y desplegado de principio a fin."
+      action={
+        site.socials.github && (
+          <ProfileLink
+            href={site.socials.github}
+            icon={<GitHubIcon data-icon="inline-start" />}
+            label="Ver GitHub"
+          />
+        )
+      }
     >
       <div className="reveal">
         <Carousel
