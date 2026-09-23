@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Portfolio personal minimalista (estilo Apple / iOS) hecho con **Next.js 16**, **React 19**, **Tailwind CSS 4** y **shadcn/ui**.
+Todas las páginas se generan como HTML estático, lo que ayuda al SEO y a la velocidad de carga.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dónde cambiar el contenido
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Todo el texto está en [`src/data/portfolio.ts`](src/data/portfolio.ts): nombre, rol, stack, "Sobre mí", proyectos, experiencia, habilidades y redes sociales.
 
-## Learn More
+| Qué                  | Dónde                                                             |
+| -------------------- | ----------------------------------------------------------------- |
+| Tu CV                | Sustituye `public/cv.pdf`                                         |
+| Foto de "Sobre mí"   | Déjala en `public/` y pon la ruta en `about.photo`                |
+| Capturas de proyectos| Déjalas en `public/projects/` y pon la ruta en `image` de cada uno |
+| Colores y tipografía | `src/app/globals.css`                                             |
 
-To learn more about Next.js, take a look at the following resources:
+## SEO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Incluido de serie:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Metadatos completos (título, descripción, canonical, Open Graph, Twitter) en `src/app/layout.tsx`
+- Datos estructurados JSON-LD (`ProfilePage` + `Person`) en `src/app/page.tsx`
+- `robots.txt`, `sitemap.xml` y `manifest.webmanifest` generados automáticamente
+- Imagen para compartir en redes (`src/app/opengraph-image.tsx`) e iconos con tus iniciales
+- HTML semántico: un solo `h1`, secciones con `h2`, `lang="es"` y enlace para saltar al contenido
 
-## Deploy on Vercel
+Antes de publicar:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Pon tu dominio real en `site.url` (o en la variable `NEXT_PUBLIC_SITE_URL`, ver `.env.example`).
+2. Cambia la descripción y las `keywords` de `site` por las tuyas.
+3. Tras publicar, da de alta el dominio en [Google Search Console](https://search.google.com/search-console) y envía `/sitemap.xml`.
+4. Comprueba los datos estructurados con la [prueba de resultados enriquecidos](https://search.google.com/test/rich-results).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Despliegue
+
+La opción más sencilla es [Vercel](https://vercel.com): importa el repositorio y listo.
