@@ -54,6 +54,8 @@ export const site = {
   location: "Pontevedra, España",
   email: "ivansoriano1901@gmail.com",
   cvUrl: "/cv.pdf",
+  /** Nombre con el que se guarda el CV al descargarlo. Fuente editable en cv/cv.html. */
+  cvFileName: "CV Ivan Soriano.pdf",
   /** Muestra el aviso "Disponible para nuevos proyectos" en la portada. */
   available: false,
   description:
@@ -69,8 +71,7 @@ export const site = {
   ],
   socials: {
     linkedin: "https://www.linkedin.com/in/ivan-soriano-bacete-068365225/",
-    // PENDIENTE: perfil de GitHub
-    github: undefined as string | undefined,
+    github: "https://github.com/IvanSoriano19" as string | undefined,
   },
 }
 

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV Ivan Soriano</title>
+<meta name="author" content="Ivan Soriano Bacete">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=block" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; }
+  body {
+    font-family: "DM Sans", sans-serif;
+    color: #111;
+    font-size: 10pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 26pt 40pt 30pt;
+    overflow: hidden;
+  }
+  a { color: inherit; }
+
+  /* Cabecera */
+  header { text-align: center; }
+  h1 {
+    font-size: 33pt;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-right: -0.3em; /* compensa el espaciado de la última letra */
+    line-height: 1.1;
+  }
+  .role {
+    margin-top: 6pt;
+    font-size: 12.5pt;
+    letter-spacing: 0.3em;
+    margin-right: -0.3em;
+  }
+  .contact {
+    margin-top: 12pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11pt;
+  }
+  .contact > * { padding: 0 14pt; }
+  .contact > * + * { border-left: 1pt solid #888; }
+  .contact .spaced { letter-spacing: 0.16em; }
+  .li { display: inline-flex; align-items: center; gap: 8pt; text-decoration: none; }
+  .li span { text-decoration: underline; text-underline-offset: 2pt; }
+  .li svg { width: 20pt; height: 20pt; }
+
+  hr { border: 0; border-top: 0.8pt solid #999; margin: 14pt 0 10pt; }
+
+  h2 {
+    font-size: 12.5pt;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    color: #555;
+    margin-bottom: 7pt;
+  }
+  p { text-align: justify; }
+  .about p + p { margin-top: 1pt; }
+
+  /* Experiencia */
+  .job + .job { margin-top: 11pt; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2pt;
+  }
+  .job-title { font-size: 11.5pt; font-weight: 700; }
+  .job-title .sep { font-weight: 700; margin: 0 9pt; }
+  .job-title .tag { font-weight: 400; color: #555; font-size: 10pt; }
+  .dates { font-size: 9.5pt; font-weight: 700; white-space: nowrap; }
+
+  /* Habilidades y educación */
+  .cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0 22pt; }
+  .skills li { list-style: none; line-height: 1.4; }
+  .skills li + li { margin-top: 4pt; }
+  .skills b { font-weight: 500; }
+  .edu-item + .edu-item { margin-top: 8pt; }
+  .edu-item strong { font-weight: 700; display: block; }
+  .edu-item .sep { margin: 0 8pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>IVAN SORIANO</h1>
+    <p class="role" style="text-align:center">SOFTWARE DEVELOPER</p>
+    <div class="contact">
+      <a class="li" href="https://www.linkedin.com/in/ivan-soriano-bacete-068365225/">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="12" fill="#555"/>
+          <circle cx="12" cy="12" r="9.2" fill="none" stroke="#e6e6e6" stroke-width="1.2"/>
+          <rect x="7.2" y="10.2" width="2.1" height="6.6" fill="#e6e6e6"/>
+          <circle cx="8.25" cy="7.9" r="1.25" fill="#e6e6e6"/>
+          <path d="M10.9 10.2h2v.9c.4-.7 1.2-1.1 2.1-1.1 1.6 0 2.4 1 2.4 2.8v4h-2.1v-3.6c0-.9-.3-1.4-1-1.4-.8 0-1.3.5-1.3 1.5v3.5h-2.1z" fill="#e6e6e6"/>
+        </svg>
+        <span>Ivan Soriano Bacete</span>
+      </a>
+      <span class="spaced">633157402</span>
+      <a class="spaced" href="mailto:ivansoriano1901@gmail.com" style="text-decoration:none">ivansoriano1901@gmail.com</a>
+    </div>
+  </header>
+
+  <hr>
+
+  <section class="about">
+    <h2>SOBRE MÍ</h2>
+    <p>Desarrollador fullstack con experiencia en proyectos web y multiplataforma, aplicando tecnologías actuales como C# con .NET Core, TypeScript y JavaScript utilizando React.</p>
+    <p>Mi experiencia como deportista de alto nivel en Taekwondo me ha enseñado el valor de la perseverancia y el compromiso, cualidades que aplico en mi día a día profesional.</p>
+    <p>Soy una persona muy ambiciosa, con una rápida capacidad de aprendizaje y siempre estoy buscando crecer y enfrentar nuevos retos.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>EXPERIENCIA LABORAL</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="job-title">Desarrollador de Software<span class="sep">|</span>Matrix Development System</div>
+        <div class="dates">Octubre, 2025 - Actualidad</div>
+      </div>
+      <p>Desarrollo y mantenimiento de software con C#, .NET Core, .NET Framework y Visual Basic .NET sobre SQL Server, incluidas integraciones con distintos software de contabilidad. Trabajo en remoto con metodologías ágiles y Jira.</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="job-title">Desarrollador FullStack<span class="sep">|</span>Pavabits S.L</div>
+        <div class="dates">Febrero, 2024 - Septiembre, 2025</div>
+      </div>
+      <p>Desarrollo y mantenimiento de aplicaciones web y de escritorio para Pavasal con C# y .NET Core 6 en el backend y React con TypeScript en el frontend, sobre PostgreSQL y sistemas AS/400 de IBM. APIs RESTful con ASP.NET Core aplicando Arquitectura Hexagonal y principios SOLID, pruebas unitarias y E2E (xUnit, JUnit, Postman), Git con Gitflow en Bitbucket y Scrum.</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="job-title">Desarrollador Backend<span class="sep">|</span>TRAK <span class="tag">(prácticas)</span></div>
+        <div class="dates">Marzo, 2023 - Junio, 2023</div>
+      </div>
+      <p>API REST con Python y Django REST Framework, pruebas automatizadas con Selenium y Cypress, y un nuevo inicio de sesión con autenticación multifactor en React.</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="job-title">Desarrollador Backend<span class="sep">|</span>Gedesco <span class="tag">(prácticas)</span></div>
+        <div class="dates">Marzo, 2022 - Junio, 2022</div>
+      </div>
+      <p>Nuevas funcionalidades y pruebas unitarias en .NET Framework (C#), con control de versiones en Git y Azure Repos.</p>
+    </article>
+  </section>
+
+  <hr>
+
+  <div class="cols">
+    <section class="skills">
+      <h2>HABILIDADES TÉCNICAS</h2>
+      <ul>
+        <li><b>Lenguajes:</b> C#, TypeScript, JavaScript, Python</li>
+        <li><b>Backend:</b> .NET Core, .NET Framework, ASP.NET, Django</li>
+        <li><b>Frontend:</b> React, Material-UI, Bootstrap</li>
+        <li><b>Bases de datos:</b> SQL Server, PostgreSQL, MySQL, Supabase</li>
+        <li><b>Control de versiones:</b> Git, GitHub, Bitbucket</li>
+        <li><b>Herramientas:</b> Postman, Swagger, Jira, Scrum</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>EDUCACIÓN</h2>
+      <div class="edu-item">
+        <strong>Grado en Ingeniería Informática</strong>
+        Universitat Oberta de Catalunya<span class="sep">|</span>En curso
+      </div>
+      <div class="edu-item">
+        <strong>Desarrollo de Aplicaciones Multiplataforma</strong>
+        IES Abastos<span class="sep">|</span>2021 - 2023
+      </div>
+      <div class="edu-item">
+        <strong>Desarrollo de Aplicaciones Web</strong>
+        IES Abastos<span class="sep">|</span>2022 - 2023
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

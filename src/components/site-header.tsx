@@ -64,7 +64,7 @@ export function SiteHeader() {
             size="sm"
             className="hidden px-3.5 sm:inline-flex"
           >
-            <a href={site.cvUrl} download>
+            <a href={site.cvUrl} download={site.cvFileName}>
               CV
             </a>
           </Button>
@@ -106,7 +106,7 @@ export function SiteHeader() {
                 </ul>
               </nav>
               <Button asChild size="xl" className="mt-4">
-                <a href={site.cvUrl} download>
+                <a href={site.cvUrl} download={site.cvFileName}>
                   Descargar CV
                 </a>
               </Button>

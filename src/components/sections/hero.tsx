@@ -44,7 +44,7 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary">
-              <a href={site.cvUrl} download>
+              <a href={site.cvUrl} download={site.cvFileName}>
                 <Download data-icon="inline-start" />
                 Descargar CV
               </a>
